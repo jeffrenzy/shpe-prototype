@@ -1,0 +1,36 @@
+.nav__logoholder {
+  display: flex;
+  align-items:center; 
+  justify-content: left;
+  width: 25%;
+  height: 100%;
+}
+
+.nav__logoholder h1 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 1.4rem;
+  border-left: 2px solid var(--color-light);
+  padding-left: 5%;
+  position:relative;
+}
+
+/* .nav__logoholder h1::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: rebeccapurple;
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.nav__logoholder img {
+  width: auto;
+  height: 42px;
+  object-fit: contain;
+  padding-right: 5%;
+}
+

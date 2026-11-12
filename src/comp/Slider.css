@@ -1,0 +1,35 @@
+.slider__window {
+    overflow: hidden;
+}
+
+.slider__track {
+    display: flex;
+    transition: transform 250ms ease;
+}
+
+.slider__slide {
+    display: grid;
+    grid-template-columns: repeat(var(--cards-per-slide), 1fr);
+    gap: 1.25rem;
+}
+
+.slider__controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.slider__controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.slider__card {
+    background-color: red;
+    max-height: 350px;
+}
+
+.news-card {
+
+}

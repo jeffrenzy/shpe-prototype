@@ -11,6 +11,8 @@
   --color-border: #dbe1e8;
   --color-surface: #f7f9fb;
   --color-primary: #1c5d99;
+  --color-accent: #73000a;
+  --color-bright-primary: #5fb2ff;
   --max-width: 1900px;
 }
 
@@ -49,13 +51,14 @@ select {
 
 button {
   cursor: pointer;
+  border: none;
+  border-radius: 0px;
 }
 
 h1,
 h2,
-h3,
-p {
-  margin-top: 0;
+h3 {
+  margin: 0;
 }
 
 h1,
@@ -73,10 +76,6 @@ h2 {
   font-size: clamp(1.75rem, 3vw, 2.75rem);
 }
 
-p {
-  /* color: var(--color-muted); */
-}
-
 .cont {
   width: min(var(--max-width), calc(100% - 3rem));
   margin-inline: auto;
@@ -84,4 +83,16 @@ p {
 
 .sect {
   padding-block: 5rem;
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+.long-pic {
+  width: 100%;
+  object-fit: cover;
 }

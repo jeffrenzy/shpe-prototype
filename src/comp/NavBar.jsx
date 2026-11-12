@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/shpe_logo_trans.png';
+import { Link, NavLink } from 'react-router-dom';
+import FullLogo from './FullLogo';
 import './NavBar.css';
+
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,19 +10,16 @@ function NavBar() {
   return (
     <header className="nav">
       <div className="cont nav__inner">
-        <Link to="/" className="nav__logoholder" aria-label="Company home">
-          <img src={logo} alt="Company logo" />
-          <h1>University of South Carolina</h1>
-        </Link>
+        
 
-       
+        <FullLogo></FullLogo>
 
         <div className="nav__right">
           <nav className="nav__links" aria-label="Main navigation">
-            <Link to="/about">About</Link>
-            <Link to="/services">Events</Link>
-            <Link to="/contact">Join</Link>
-            <Link to="/contact">Support us</Link>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/events">Events</NavLink>
+            <NavLink to="/join">Join</NavLink>
+            <NavLink to="/support_us">Support us</NavLink>
           </nav>
 
 
