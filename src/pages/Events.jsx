@@ -24,7 +24,7 @@ function Content() {
         
         <SlidableCalendar></SlidableCalendar>
         
-        <h2 className='news-slider-label'>Most recent</h2>
+        <h2 className='news-slider-label'>Main events</h2>
         <Slider cardsPerSlide={4}>
             {Array.from({ length: 8 }, (_, index) => (
                 <NewsCard

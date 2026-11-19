@@ -1,8 +1,13 @@
+:root {
+    --event-bg: #dbeafe; 
+    --event-text-col: #1e40af;
+}
+
 .slidable-calendar {
     width: 100%;
-    height: 20rem;
-    margin: 4rem 0px;
-    padding: 0px 38%;
+    /* height: 30rem; */
+    /* margin: 4rem 0px; */
+    padding: 3rem 12%;
     
     display: flex;
     flex-direction: column;
@@ -26,6 +31,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 0.55fr repeat(6, 1fr);
+    height: 40rem;
     gap: 0px;
     aspect-ratio: 7 / 6.55;
 }
@@ -34,9 +40,85 @@
     min-width: 0;
     min-height: 0;
     border: 1px solid #000;
+
 }
 
 .slidable-calendar__cell:nth-child(-n + 7) {
     background: #f2f2f2;
     font-weight: 700;
 }
+
+
+
+
+.slidable-calendar__date {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.slidable-calendar__events {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.slidable-calendar__event {
+    background-color: var(--event-bg);
+    color: var(--event-text-col);
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+
+    /* Prevent text from wrapping */
+    white-space: nowrap;
+
+    /* Show ... when text is too long */
+    text-overflow: ellipsis;
+
+    /* Keep the label within its cell */
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.slidable-calendar__tooltip {
+    display: none;
+    position: absolute;
+
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: white;
+    color: var(--color-text);
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    white-space: nowrap;
+    z-index: 100;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.slidable-calendar__tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 6px solid transparent;
+    border-top-color: white;
+}
+
+.slidable-calendar__event:hover .slidable-calendar__tooltip {
+    display: block;
+}
+   
